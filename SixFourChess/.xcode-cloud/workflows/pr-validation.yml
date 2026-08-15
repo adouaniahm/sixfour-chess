@@ -1,0 +1,56 @@
+name: Pull Request Validation
+description: Validate pull requests with builds and tests before merge
+
+trigger:
+  pull_requests:
+    - main
+    - develop
+
+environment:
+  xcode: 16.0
+
+platforms:
+  - iOS
+  - macOS
+
+destinations:
+  - platform: iOS Simulator
+    device: iPhone 16
+    os: latest
+  - platform: iOS Simulator
+    device: iPad Pro 13-inch (M4)
+    os: latest
+  - platform: macOS
+    os: latest
+
+actions:
+  build:
+    scheme: FreeChessApp
+    configuration: Debug
+    clean: false
+
+  analyze:
+    enabled: true
+    scheme: FreeChessApp
+
+  test:
+    enabled: false
+    # Tests désactivés car pas de target de test actuellement
+    # Activer quand FreeChessAppTests sera implémenté
+    # scheme: FreeChessAppTests
+    # code_coverage: true
+
+checks:
+  warnings_as_errors: false
+  static_analysis: true
+  code_coverage_threshold: 0  # Désactivé pour l'instant
+
+post_actions:
+  notifications:
+    email:
+      on_success: false
+      on_failure: true
+
+  github_status:
+    enabled: true
+    context: xcode-cloud/pr-validation

@@ -1,0 +1,16 @@
+# Xcode Cloud - Fichiers générés à ignorer
+
+# Build reports
+build_report.txt
+
+# Logs temporaires
+*.log
+
+# Caches
+.cache/
+
+# Derived data
+DerivedData/
+
+# Archives temporaires
+*.xcarchive.temp

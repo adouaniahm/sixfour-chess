@@ -1,0 +1,545 @@
+/*
+  Localizable.strings - Italiano
+  SixFour Chess App
+*/
+
+// MARK: - App Name
+"app.name" = "SixFour Scacchi";
+"app.tagline" = "64 caselle, secoli di patrimonio.";
+"home.title" = "SixFour";
+"home.subtitle" = "Gioca con semplicità";
+
+// MARK: - Game Modes
+"mode.playerVsBot" = "Contro un avversario virtuale";
+"mode.playerVsBot.desc" = "Sfida il motore IA con 5 livelli di difficoltà, inclusa la modalità Maestro (cloud)";
+
+// MARK: - Difficulty Levels
+"difficulty.easy" = "Facile";
+"difficulty.medium" = "Medio";
+"difficulty.hard" = "Difficile";
+"difficulty.expert" = "Esperto";
+"difficulty.master" = "Maestro";
+
+// MARK: - Player Colors
+"color.white" = "Bianco";
+"color.black" = "Nero";
+"player.label" = "Giocatore";
+"bot.label" = "Avversario virtuale";
+
+// MARK: - Piece Types
+"piece.king" = "Re";
+"piece.queen" = "Regina";
+"piece.rook" = "Torre";
+"piece.bishop" = "Alfiere";
+"piece.knight" = "Cavallo";
+"piece.pawn" = "Pedone";
+
+// MARK: - Game Actions
+"action.newGame" = "Nuova partita";
+"action.undo" = "Annulla";
+"action.settings" = "Impostazioni";
+"action.help" = "Chiedi aiuto";
+"action.analyzing" = "Analisi in corso...";
+"action.apply" = "Applica";
+"action.cancel" = "Annulla";
+"action.playMove" = "Gioca questa mossa";
+"action.history" = "Cronologia";
+"action.leaveMatch" = "Abbandona partita";
+
+// MARK: - Compact Control Bar
+"control.hint" = "Aiuto (%d)";
+"control.new" = "Nuovo";
+"control.moves" = "Mosse";
+"control.quit" = "Esci";
+"control.matches" = "Partite";
+
+// MARK: - New Game Confirmation
+"alert.newGame.title" = "Nuova partita";
+"alert.newGame.message" = "Vuoi davvero ricominciare? La partita in corso andrà persa.";
+
+// MARK: - Settings
+"settings.title" = "Impostazioni";
+"settings.gameMode" = "Modalità di gioco";
+"settings.gameMode.singleMode" = "Partita locale contro l'IA";
+"settings.gameMode.masterModeSummary" = "Analisi online contro l'IA Maestro";
+"settings.difficulty" = "Difficoltà avversario";
+"settings.difficulty.locked.title" = "Partita in corso";
+"settings.difficulty.locked.message" = "La difficoltà può essere modificata solo per una partita non ancora iniziata.";
+"settings.feedback" = "Feedback di gioco";
+"settings.moveComments" = "Messaggi delle mosse";
+"settings.rules" = "Regole degli scacchi";
+"settings.info" = "📚 Informazioni";
+
+// MARK: - Game Results
+"result.checkmate" = "Scacco matto! %@ ha vinto";
+"result.checkmate.white" = "Il bianco";
+"result.checkmate.black" = "Il nero";
+"result.stalemate" = "Stallo! Patta";
+"result.drawByRepetition" = "Patta! Ripetizione tripla della posizione";
+"result.drawByFiftyMoves" = "Patta! Regola delle 50 mosse";
+"result.corruptedMatch" = "Errore: Dati della partita corrotti";
+
+// MARK: - Help System
+"help.title" = "Aiuto di gioco";
+"help.subtitle" = "Analizza la mossa migliore da giocare";
+"help.remaining" = "Aiuti rimanenti dopo questo: %d";
+"help.limit.title" = "Aiuti esauriti";
+"help.limit.message" = "Hai utilizzato i 3 aiuti disponibili per questa partita.";
+"help.warning.check" = "⚠️ Attenzione! Sei sotto scacco.";
+"help.suggestedMove" = "💡 Mossa suggerita: ";
+"help.whyGood" = "Perché questa mossa?";
+"help.noMoves" = "Nessuna mossa disponibile da analizzare.";
+"help.capturesPiece" = "Cattura un pezzo del valore %d";
+"help.castles" = "Mette il re al sicuro";
+"help.activatesRook" = "Attiva la torre";
+"help.promotion" = "Promuove il pedone a regina";
+"help.controlsCenter" = "Controlla il centro";
+"help.developsPiece" = "Sviluppa un pezzo";
+"help.bestMove" = "Miglior mossa secondo l'analisi della posizione";
+"help.improvesPosition" = "Migliora la tua posizione strategica";
+
+// MARK: - Move Descriptions
+"move.from" = "da";
+"move.to" = "a";
+"move.captures" = "cattura";
+"move.shortCastle" = "Arrocco corto (O-O)";
+"move.longCastle" = "Arrocco lungo (O-O-O)";
+
+// MARK: - Promotion
+"promotion.title" = "Scegli promozione";
+"promotion.aiTitle" = "Promozione dell'avversario";
+"promotion.aiMessage" = "L'avversario virtuale promuove il suo pedone a %@.";
+
+// MARK: - AI Turn
+"ai.turn.title" = "Turno dell'avversario";
+"ai.turn.message" = "È ora il turno dell'avversario virtuale. Vuoi lasciarlo giocare o annullare un'altra mossa?";
+"ai.turn.letPlay" = "Lascia giocare l'avversario";
+"ai.turn.undoMore" = "No, annulla ancora";
+
+// MARK: - Undo vs AI
+"undo.vsai.title" = "Annulla la tua mossa";
+"undo.vsai.message" = "La mossa dell'avversario virtuale è stata annullata. Vuoi anche annullare la tua ultima mossa?";
+"undo.vsai.yes" = "Sì, annulla la mia mossa";
+"undo.vsai.no" = "No, lascia giocare l'avversario di nuovo";
+
+// MARK: - Rules
+"rules.title" = "Regole degli scacchi";
+"rules.intro" = "Questa applicazione implementa le regole ufficiali degli scacchi FIDE. Ecco una panoramica delle funzionalità disponibili.";
+"rules.implemented" = "✅ Regole implementate";
+"rules.notImplemented" = "⚠️ Regole non ancora implementate";
+"rules.technologies" = "Tecnologie utilizzate:";
+"rules.version" = "Versione: %@";
+
+// MARK: - Tech Stack Section
+"tech.architecture" = "Architettura";
+"tech.architecture.redux" = "Pattern Redux (9 middleware)";
+"tech.architecture.middleware" = "Pipeline Action/Mutation";
+"tech.architecture.flow" = "Flussi reattivi (ReduxFlow)";
+
+"tech.ai" = "Motore IA Scacchi";
+"tech.ai.elo" = "Modalità Esperto: ~2100 Elo stimato";
+"tech.ai.elo.master" = "Modalità Maestro: ~3500+ Elo (Stockfish 18 Cloud)";
+"tech.ai.nnue" = "Valutazione NNUE (CoreML on-device)";
+"tech.ai.minimax" = "Negamax + Alpha-Beta pruning";
+"tech.ai.nullmove" = "Null-Move Pruning (R=2)";
+"tech.ai.quiescence" = "Quiescence Search (anti-orizzonte)";
+"tech.ai.lmr" = "Late Move Reductions (LMR)";
+"tech.ai.killer" = "Killer Moves (2 slot/ply)";
+"tech.ai.check_ext" = "Estensioni di scacco";
+"tech.ai.evaluation" = "Tabelle posizionali (PST) + sicurezza re";
+"tech.ai.mvvlva" = "Ordine mosse MVV-LVA";
+"tech.ai.transposition" = "Tabella di trasposizione (Zobrist)";
+"tech.ai.opening_book" = "Libro aperture (Polyglot)";
+
+"tech.frameworks" = "Framework";
+"tech.frameworks.swift6" = "Swift 6 + @Observable";
+"tech.frameworks.swiftui" = "SwiftUI (iOS 17+)";
+"tech.frameworks.concurrency" = "async/await + actors";
+"tech.frameworks.swiftdata" = "SwiftData (persistenza)";
+
+
+"tech.accessibility" = "Accessibilità & UX";
+"tech.accessibility.voiceover" = "Supporto VoiceOver completo";
+"tech.accessibility.haptics" = "Feedback aptico + suoni";
+"tech.accessibility.i18n" = "3 lingue (EN, FR, IT)";
+
+// Rule descriptions
+"rule.basicMoves" = "Mosse di base";
+"rule.basicMoves.desc" = "Tutte le mosse legali per ogni pezzo (pedone, cavallo, alfiere, torre, regina, re)";
+"rule.captures" = "Catture";
+"rule.captures.desc" = "Cattura dei pezzi avversari secondo le regole standard";
+"rule.enPassant" = "En passant";
+"rule.enPassant.desc" = "Cattura speciale di un pedone che ha appena avanzato di due caselle";
+"rule.castling" = "Arrocco";
+"rule.castling.desc" = "Arrocco corto e lungo quando le condizioni sono soddisfatte";
+"rule.promotion" = "Promozione del pedone (Regola FIDE)";
+"rule.promotion.desc" = "Quando un pedone raggiunge l'ultima traversa, DEVE essere promosso a regina, torre, alfiere o cavallo. Il giocatore può scegliere liberamente qualsiasi pezzo. Se un pezzo dello stesso tipo del tuo colore è stato catturato, viene automaticamente rimosso dai pezzi catturati (e il punteggio viene aggiustato). Altrimenti, viene creato un nuovo pezzo. Puoi quindi avere più regine sulla scacchiera.";
+"rule.checkmate" = "Scacco matto";
+"rule.checkmate.desc" = "Rilevamento automatico dello scacco matto (vittoria)";
+"rule.stalemate" = "Stallo";
+"rule.stalemate.desc" = "Rilevamento automatico dello stallo (patta senza scacco ma senza mossa legale)";
+"rule.threefold" = "Ripetizione tripla";
+"rule.threefold.desc" = "Patta automatica se la stessa posizione si ripete 3 volte";
+"rule.fiftyMoves" = "Regola delle 50 mosse";
+"rule.fiftyMoves.desc" = "Patta automatica dopo 50 mosse senza movimento di pedoni o catture";
+"rule.validation" = "Validazione delle mosse";
+"rule.validation.desc" = "Impedisce le mosse che mettono il proprio re sotto scacco";
+"rule.history" = "Storico delle mosse";
+"rule.history.desc" = "Registrazione di tutte le mosse giocate con timestamp";
+"rule.undo" = "Annullamento delle mosse";
+"rule.undo.desc" = "Possibilità di annullare le ultime mosse giocate";
+
+"rule.bot.title" = "🤖 Avversario virtuale";
+"rule.bot.minimax" = "Algoritmo Minimax";
+"rule.bot.minimax.desc" = "Utilizza l'algoritmo Minimax con potatura Alpha-Beta";
+"rule.bot.levels" = "4 livelli di difficoltà";
+"rule.bot.levels.desc" = "Facile (profondità 1), Medio (2), Difficile (3), Esperto (4)";
+"rule.bot.evaluation" = "Valutazione della posizione";
+"rule.bot.evaluation.desc" = "Valuta le posizioni con valori dei pezzi e tavole di posizione";
+
+"rule.insufficient" = "Materiale insufficiente";
+"rule.insufficient.desc" = "Rilevamento automatico della patta se materiale insufficiente (es: re + cavallo vs re)";
+"rule.clock" = "Orologio scacchistico";
+"rule.clock.desc" = "Gestione del tempo con cronometro per ogni giocatore";
+"rule.pgn" = "Notazione algebrica completa";
+"rule.pgn.desc" = "Notazione PGN (Portable Game Notation) per esportare/importare partite";
+"rule.endgame" = "Tabelle di finale";
+"rule.endgame.desc" = "Tablebases di finale per posizioni con pochi pezzi";
+"rule.analysis" = "Analisi della partita";
+"rule.analysis.desc" = "Valutazione delle mosse giocate e suggerimenti di miglioramento";
+"rule.tournament" = "Modalità torneo";
+"rule.tournament.desc" = "Organizzazione di tornei con classifica ELO";
+"rule.puzzles" = "Puzzle di scacchi";
+"rule.puzzles.desc" = "Risoluzione di problemi di scacchi e tattiche";
+
+// MARK: - Additional UI strings
+"color.whites" = "Bianco";
+"color.blacks" = "Nero";
+"ui.thinking" = "Pensando...";
+"ui.history" = "Storico";
+"ui.moves" = "Mosse giocate: %d";
+
+// MARK: - Move Commentary
+"moveComment.check" = "Scacco!";
+"moveComment.castling" = "Arrocco eseguito!";
+"moveComment.enPassant" = "En passant!";
+"moveComment.promotion" = "Promozione a %@!";
+"moveComment.winningCapture" = "Cattura vincente!";
+"moveComment.goodCapture" = "Buona cattura!";
+"moveComment.equalTrade" = "Scambio pari";
+"moveComment.badCapture" = "Cattura sfavorevole";
+"moveComment.checkmate" = "Scacco matto!";
+"moveComment.stalemate" = "Stallo";
+"moveComment.drawRepetition" = "Patta per ripetizione";
+"moveComment.drawFiftyMoves" = "Patta delle 50 mosse";
+"moveComment.gameOver" = "Fine partita";
+"moveComment.center" = "Controlla il centro";
+"moveComment.developsPiece" = "Sviluppa un pezzo";
+"moveComment.activatesPiece" = "Attiva un pezzo";
+"moveComment.usefulDevelopment" = "Sviluppo utile";
+"moveComment.improvesActivity" = "Migliora l'attività";
+"moveComment.solidPosition" = "Posizione solida";
+"moveComment.looksForWeakness" = "Cerca una debolezza";
+
+// MARK: - Settings
+"settings.copyright" = "© 2026 ADOUANI SAS";
+"ui.learning" = "Apprendimento";
+
+// Game History
+"game.history.current" = "Mosse";
+"game.history.full" = "Mosse";
+"game.history.viewAll" = "Vedi tutto";
+"game.history.empty" = "Nessuna mossa ancora";
+"history.played.title" = "Partite giocate";
+"history.played.detail.title" = "Cronologia partita";
+"history.played.empty.title" = "Nessuna partita salvata";
+"history.played.empty.message" = "Le partite terminate appariranno qui.";
+"history.played.summary" = "%d mosse • %@ • %@";
+"history.played.meta" = "Livello IA: %@ • %@";
+"history.replay.start" = "Posizione iniziale";
+"history.replay.moveIndex" = "Mossa %d di %d";
+"history.replay.first" = "Inizio";
+"history.replay.previous" = "Indietro";
+"history.replay.next" = "Avanti";
+"history.replay.last" = "Fine";
+"history.result.abandoned" = "Partita interrotta";
+"ui.perfect.beginners" = "Perfetto per principianti, 2 mosse in anticipo";
+"ui.good.practice" = "Buon livello per esercitarsi, 3 mosse in anticipo";
+"ui.challenge.experienced" = "Sfida per giocatori esperti, 4 mosse in anticipo";
+"ui.very.hard" = "Molto difficile, calcola fino a 5 mosse in anticipo";
+"ui.master.cloud" = "Motore cloud Stockfish 18, il più forte disponibile";
+"ui.search.depth" = "Profondità di ricerca: %d";
+
+// MARK: - Etichette di Accessibilità
+// Scacchiera
+"a11y.chessboard.label" = "Scacchiera";
+"a11y.square" = "Casella %@";
+"a11y.emptySquare" = "Casella vuota";
+"a11y.selected" = "Selezionata";
+"a11y.availableMove" = "Mossa disponibile";
+"a11y.lastMove" = "Ultima mossa";
+"a11y.close" = "Chiudi";
+
+// Suggerimenti
+"a11y.hint.tapToSelect" = "Tocca per selezionare questo pezzo";
+"a11y.hint.tapToMove" = "Tocca per spostare il pezzo selezionato qui";
+"a11y.hint.getHelp" = "Mostra un aiuto. Hai ancora %d aiuti in questa partita.";
+"a11y.hint.newGame" = "Inizia una nuova partita con le impostazioni attuali";
+"a11y.hint.history" = "Vedi tutte le mosse giocate nella partita in corso";
+"a11y.hint.applyChanges" = "Applica le impostazioni e inizia una nuova partita";
+"a11y.hint.noChanges" = "Nessuna modifica da applicare";
+"a11y.hint.tapToView" = "Tocca per vedere questa partita";
+
+// Info Giocatore
+"a11y.yourTurn" = "È il tuo turno";
+"a11y.captured" = "Pezzi catturati: %@";
+"a11y.advantage" = "Vantaggio materiale: +%d";
+"a11y.noCaptured" = "Nessun pezzo catturato";
+
+// Controlli di Navigazione
+"a11y.rewind" = "Torna all'inizio";
+"a11y.previousMove" = "Mossa precedente";
+"a11y.nextMove" = "Mossa successiva";
+"a11y.fastForward" = "Avanzamento rapido alla fine";
+"a11y.hint.rewind" = "Torna alla posizione iniziale";
+"a11y.hint.previousMove" = "Vedi la mossa precedente";
+"a11y.hint.nextMove" = "Vedi la mossa successiva";
+"a11y.hint.fastForward" = "Vai alla posizione finale";
+
+// Ricerca & Filtri
+"a11y.year" = "Anno %d";
+"a11y.notSelected" = "Non selezionata";
+"a11y.clearSearch" = "Cancella ricerca";
+"a11y.searchField" = "Cerca partite";
+"a11y.hint.searchGames" = "Cerca per nome giocatore o evento";
+
+// Regole
+"a11y.implemented" = "Implementata";
+"a11y.planned" = "Prevista per il futuro";
+
+// Info Partita
+"a11y.result" = "Risultato: %@";
+"a11y.event" = "Evento";
+"a11y.location" = "Luogo";
+"a11y.date" = "Data";
+"a11y.viewing" = "Visualizzando";
+"a11y.inYear" = "nel %d";
+"a11y.at" = "a %@";
+
+// Storico
+"a11y.moveEntry" = "Mossa %d: %@";
+"a11y.moveNumber" = "Mossa numero %d";
+"a11y.move" = "Mossa: %@";
+"a11y.time" = "Ora";
+
+// Generale
+"action.ok" = "OK";
+"game.result.title" = "Partita terminata";
+// MARK: - Sezione Informazioni
+"settings.about" = "Informazioni";
+"settings.version" = "Versione";
+"settings.privacy" = "Informativa sulla privacy";
+"settings.support" = "Supporto & Contatto";
+"settings.allRightsReserved" = "Tutti i diritti riservati.";
+
+"action.quit" = "Esci";
+"action.start" = "Inizia";
+"action.play" = "Gioca";
+"error.title" = "Errore";
+"error.authentication" = "Errore di autenticazione";
+"error.loading" = "Errore di caricamento";
+"error.cannotParseGame" = "Impossibile analizzare le mosse di questa partita";
+
+// Cloud Stockfish (modalità Maestro)
+"cloud.error.title" = "Servizio Maestro non disponibile";
+"cloud.error.network" = "Controlla la tua connessione internet";
+"cloud.error.api" = "Il servizio Stockfish è temporaneamente non disponibile";
+"cloud.error.suggestion" = "Puoi cambiare la difficoltà nelle impostazioni per giocare in locale";
+"cloud.error.retry" = "Riprova";
+
+"loading.game" = "Caricamento partita...";
+"time.agoSeconds" = "%ds fa";
+"time.agoMinutes" = "%dmin fa";
+"time.agoHours" = "%dh fa";
+
+// MARK: - Comandi Menu
+"menu.game" = "Partita";
+"menu.newGame" = "Nuova partita";
+"menu.undo" = "Annulla";
+"menu.settings" = "Impostazioni";
+
+// MARK: - Gestione del Consenso (CMP)
+// Comune
+"privacy.title" = "Privacy";
+"privacy.data" = "Privacy & Dati";
+
+// Banner del consenso
+"consent.banner.headline.simple" = "Le Tue Scelte sulla Privacy";
+"consent.banner.message.simple" = "Utilizziamo solo i dati necessari al funzionamento dell'app e, se lo consenti, metriche anonime e analisi cloud opzionali. Puoi gestire le tue preferenze qui sotto.";
+"consent.banner.accept" = "Accetta Tutto";
+"consent.banner.refuse" = "Rifiuta Tutto";
+"consent.banner.continue" = "Continua senza accettare";
+"consent.banner.save" = "Salva le Mie Scelte"; // NUOVO
+"consent.banner.savePreferences" = "Salva le Mie Preferenze";
+"consent.banner.accept_all" = "Accetta Tutto";
+"consent.banner.refuse_non_essential" = "Rifiuta Non Essenziali";
+"consent.banner.footer.info" = "Puoi modificare le tue preferenze in qualsiasi momento dalle Impostazioni.";
+
+// Categorie di consenso
+"consent.category.title" = "Categorie di dati";
+"consent.category.footer" = "Tocca 'Modifica Preferenze' per aggiornare le tue scelte sulla privacy.";
+"consent.category.always.active" = "Sempre Attivo";
+
+"consent.category.necessary.name" = "Strettamente Necessari";
+"consent.category.necessary.desc" = "Essenziali per il corretto funzionamento dell'app. Questi dati abilitano funzionalità di base come salvataggi locali, sicurezza e accessibilità.";
+
+"consent.category.performance.name" = "Prestazioni & Analitiche";
+"consent.category.performance.desc" = "Ci aiutano a capire come utilizzi l'app per migliorare la tua esperienza. Questi dati raccolgono statistiche di utilizzo anonime.";
+
+// Permessi di consenso
+"consent.permission.storage.name" = "Archiviazione Dati di Gioco";
+"consent.permission.storage.desc" = "Salvare i tuoi progressi e preferenze";
+"consent.permission.analytics.name" = "Analitiche di Utilizzo";
+"consent.permission.analytics.desc" = "Analitiche anonime per migliorare l'app";
+"consent.permission.cloudai.name" = "Analisi IA Cloud (Modalità Maestro)";
+"consent.permission.cloudai.desc" = "In modalità Maestro, le posizioni scacchistiche (FEN) vengono inviate a lichess.org e stockfish.online per il calcolo. Nessun dato personale viene trasmesso.";
+
+// Impostazioni del consenso
+"consent.settings.title" = "Privacy & Dati";
+"consent.settings.status" = "Stato del Consenso";
+"consent.settings.granted" = "Concesso il %@";
+"consent.settings.notGranted" = "Non concesso";
+"consent.settings.modify" = "Modifica Preferenze";
+"consent.settings.preferences" = "Preferenze privacy";
+"consent.settings.actions" = "Gestione Dati";
+"consent.settings.export" = "Esporta i Miei Dati";
+"consent.settings.delete" = "Elimina il Mio Account";
+"consent.settings.actions.footer.simple" = "Queste funzionalità arriveranno presto.";
+"consent.settings.comingsoon.title" = "Prossimamente";
+"consent.settings.comingsoon.export" = "La funzionalità di esportazione dati sarà disponibile in un futuro aggiornamento.";
+"consent.settings.comingsoon.delete" = "L'eliminazione dell'account sarà disponibile in un futuro aggiornamento.";
+
+// Informativa sulla privacy
+"privacy.policy.title" = "Informativa sulla Privacy";
+
+// Privacy Policy - Summary View
+"privacy.policy.summary.title" = "Riepilogo";
+"privacy.policy.summary.content" = "SixFour dà priorità alla tua privacy. Il gioco locale resta sul tuo dispositivo e le analisi opzionali dipendono dalle tue scelte di consenso.";
+
+"privacy.policy.key.points" = "Punti Chiave";
+"privacy.policy.point.offline" = "Modalità offline: nessuna raccolta dati";
+"privacy.policy.point.cloudai" = "Analisi cloud: le posizioni scacchistiche vengono inviate solo con il tuo consenso";
+"privacy.policy.point.consent" = "Consenso esplicito richiesto";
+"privacy.policy.point.no.ads" = "Nessuna pubblicità o tracciamento";
+"privacy.policy.point.gdpr" = "Conforme a GDPR e CNIL";
+
+"privacy.policy.read.full" = "Leggi l'informativa completa";
+"privacy.policy.external.link" = "Apre nel browser";
+
+"privacy.policy.contact.title" = "Contatto";
+
+// MARK: - VoiceOver Announcements
+// Moves
+"a11y.announce.yourMove" = "Hai giocato %@ da %@ a %@";
+"a11y.announce.botMove" = "L'avversario virtuale ha giocato %@ da %@ a %@";
+"a11y.announce.opponentMove" = "L'avversario ha giocato %@ da %@ a %@";
+"a11y.announce.genericMove" = "%@ ha giocato %@ da %@ a %@";
+
+// Turns
+"a11y.announce.yourTurnNow" = "È il tuo turno";
+"a11y.announce.botTurnNow" = "L'avversario virtuale sta pensando";
+"a11y.announce.opponentTurnNow" = "Turno dell'avversario";
+"a11y.announce.genericTurn" = "È il turno di %@";
+
+// Check
+"a11y.announce.check" = "Scacco!";
+"a11y.announce.check.single" = "Scacco da %@!";
+"a11y.announce.check.double" = "Doppio scacco da %@ e %@!";
+
+// Game End
+"a11y.announce.checkmate.win" = "Scacco matto! Hai vinto! Congratulazioni!";
+"a11y.announce.checkmate.lose" = "Scacco matto. L'avversario virtuale ha vinto.";
+"a11y.announce.checkmate.generic" = "Scacco matto! %@ ha vinto!";
+"a11y.announce.stalemate" = "Stallo. La partita è patta.";
+"a11y.announce.draw" = "Pareggio.";
+"a11y.announce.draw.repetition" = "Pareggio per triplice ripetizione.";
+"a11y.announce.draw.fiftyMoves" = "Pareggio per la regola delle 50 mosse.";
+
+// Captures
+"a11y.announce.capturedAt" = "Hai catturato il %@ in %@";
+"a11y.announce.capturedEnPassant" = "Hai catturato il %@ en passant in %@";
+"a11y.announce.botCapturedAt" = "L'avversario virtuale ha catturato il tuo %@ in %@";
+"a11y.announce.botCapturedEnPassant" = "L'avversario virtuale ha catturato il tuo %@ en passant in %@";
+"a11y.announce.genericCaptureAt" = "%@ ha catturato il %@ in %@";
+"a11y.announce.genericCaptureEnPassant" = "%@ ha catturato il %@ en passant in %@";
+
+// Castling
+"a11y.announce.yourCastleKingside" = "Hai fatto l'arrocco corto";
+"a11y.announce.yourCastleQueenside" = "Hai fatto l'arrocco lungo";
+"a11y.announce.botCastleKingside" = "L'avversario virtuale ha fatto l'arrocco corto";
+"a11y.announce.botCastleQueenside" = "L'avversario virtuale ha fatto l'arrocco lungo";
+"a11y.announce.genericCastleKingside" = "Arrocco corto effettuato";
+"a11y.announce.genericCastleQueenside" = "Arrocco lungo effettuato";
+
+// Promotion
+"a11y.announce.promotion" = "Pedone promosso a %@";
+
+// Selection
+"a11y.announce.noMoves" = "%@ selezionato. Nessuna mossa disponibile.";
+"a11y.announce.oneMove" = "%@ selezionato. Una mossa possibile: %@";
+"a11y.announce.multipleMoves" = "%@ selezionato. %@ mosse possibili: %@";
+
+// Undo
+"a11y.announce.undo" = "Mossa annullata.";
+"a11y.announce.undoToStart" = "Ritorno alla posizione iniziale.";
+"a11y.announce.undoVsAI" = "La tua mossa e la risposta dell'avversario virtuale sono state annullate.";
+"a11y.announce.undoVsAIToStart" = "Ritorno alla posizione iniziale.";
+
+// Game Summary
+"a11y.announce.gameSummary.modeAI" = "Partita contro il bot, difficoltà %@";
+"a11y.announce.gameSummary.opponent" = "avversario";
+"a11y.announce.gameSummary.moveCount" = "%d mosse giocate";
+"a11y.announce.gameSummary.yourTurn" = "È il tuo turno";
+"a11y.announce.gameSummary.opponentTurn" = "È il turno dell'avversario";
+"a11y.announce.gameSummary.inCheck" = "Sei sotto scacco";
+
+// Tap Guards
+"a11y.announce.gameOver" = "La partita è terminata";
+"a11y.announce.aiThinking" = "L'avversario virtuale sta pensando, attendere";
+"a11y.announce.notYourTurn" = "Non è il tuo turno";
+"a11y.announce.deselected" = "Deselezionato";
+"a11y.hint.readOnlyBoard" = "Scacchiera in sola lettura";
+"a11y.hint.gameOverBoard" = "Partita terminata, scacchiera non interattiva";
+
+// Toolbar
+"a11y.toolbar.quit" = "Abbandonare la partita";
+"a11y.toolbar.settings" = "Impostazioni";
+
+// Consent
+"a11y.consent.save" = "Salva le mie scelte";
+"a11y.consent.acceptAll" = "Accetta tutto";
+"a11y.consent.refuse" = "Rifiuta i non essenziali";
+
+// Settings
+"a11y.settings.currentDifficulty" = "Difficoltà attuale: %@";
+"a11y.settings.changeDifficultyHint" = "Puoi cambiare la difficoltà nella sezione difficoltà dell'avversario qui sotto";
+
+// Matchmaking
+"a11y.share.invitation" = "Condividi invito";
+"a11y.cancel.match" = "Annulla partita";
+"a11y.resume.match" = "Riprendi la partita contro %@";
+"a11y.join.match" = "Unisciti alla partita di %@";
+
+// Audio Settings
+"settings.soundEffects" = "Effetti sonori";
+
+// MARK: - Profile
+"profile.title" = "Profilo";
+"profile.edit" = "Modifica profilo";
+"profile.displayName" = "Nome visualizzato";
+"profile.changePhoto" = "Cambia foto";
+"profile.removePhoto" = "Rimuovi foto";
+"profile.saveError" = "Impossibile salvare il profilo. Riprova.";
+"profile.imageError" = "Impossibile caricare l'immagine selezionata.";
+"profile.nameTaken" = "Questo nome è già utilizzato da un altro giocatore.";
+"action.save" = "Salva";

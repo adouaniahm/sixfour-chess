@@ -1,0 +1,23 @@
+program(1.0)
+[buildInfo = dict<tensor<string, []>, tensor<string, []>>({{"coremlc-component-MIL", "3510.2.1"}, {"coremlc-version", "3500.32.1"}, {"coremltools-component-torch", "2.6.0"}, {"coremltools-source-dialect", "TorchScript"}, {"coremltools-version", "9.0"}})]
+{
+    func main<ios17>(tensor<fp16, [1, 768]> features) {
+            tensor<fp16, [256, 768]> net_0_weight_to_fp16 = const()[name = tensor<string, []>("net_0_weight_to_fp16"), val = tensor<fp16, [256, 768]>(BLOBFILE(path = tensor<string, []>("@model_path/weights/weight.bin"), offset = tensor<uint64, []>(64)))];
+            tensor<fp16, [256]> net_0_bias_to_fp16 = const()[name = tensor<string, []>("net_0_bias_to_fp16"), val = tensor<fp16, [256]>(BLOBFILE(path = tensor<string, []>("@model_path/weights/weight.bin"), offset = tensor<uint64, []>(393344)))];
+            tensor<fp16, [1, 256]> linear_0_cast_fp16 = linear(bias = net_0_bias_to_fp16, weight = net_0_weight_to_fp16, x = features)[name = tensor<string, []>("linear_0_cast_fp16")];
+            tensor<fp16, []> var_3_to_fp16 = const()[name = tensor<string, []>("op_3_to_fp16"), val = tensor<fp16, []>(0x0p+0)];
+            tensor<fp16, []> var_4_to_fp16 = const()[name = tensor<string, []>("op_4_to_fp16"), val = tensor<fp16, []>(0x1p+0)];
+            tensor<fp16, [1, 256]> clip_0_cast_fp16 = clip(alpha = var_3_to_fp16, beta = var_4_to_fp16, x = linear_0_cast_fp16)[name = tensor<string, []>("clip_0_cast_fp16")];
+            tensor<fp16, [32, 256]> net_2_weight_to_fp16 = const()[name = tensor<string, []>("net_2_weight_to_fp16"), val = tensor<fp16, [32, 256]>(BLOBFILE(path = tensor<string, []>("@model_path/weights/weight.bin"), offset = tensor<uint64, []>(393920)))];
+            tensor<fp16, [32]> net_2_bias_to_fp16 = const()[name = tensor<string, []>("net_2_bias_to_fp16"), val = tensor<fp16, [32]>(BLOBFILE(path = tensor<string, []>("@model_path/weights/weight.bin"), offset = tensor<uint64, []>(410368)))];
+            tensor<fp16, [1, 32]> linear_1_cast_fp16 = linear(bias = net_2_bias_to_fp16, weight = net_2_weight_to_fp16, x = clip_0_cast_fp16)[name = tensor<string, []>("linear_1_cast_fp16")];
+            tensor<fp16, [1, 32]> clip_1_cast_fp16 = clip(alpha = var_3_to_fp16, beta = var_4_to_fp16, x = linear_1_cast_fp16)[name = tensor<string, []>("clip_1_cast_fp16")];
+            tensor<fp16, [32, 32]> net_4_weight_to_fp16 = const()[name = tensor<string, []>("net_4_weight_to_fp16"), val = tensor<fp16, [32, 32]>(BLOBFILE(path = tensor<string, []>("@model_path/weights/weight.bin"), offset = tensor<uint64, []>(410496)))];
+            tensor<fp16, [32]> net_4_bias_to_fp16 = const()[name = tensor<string, []>("net_4_bias_to_fp16"), val = tensor<fp16, [32]>(BLOBFILE(path = tensor<string, []>("@model_path/weights/weight.bin"), offset = tensor<uint64, []>(412608)))];
+            tensor<fp16, [1, 32]> linear_2_cast_fp16 = linear(bias = net_4_bias_to_fp16, weight = net_4_weight_to_fp16, x = clip_1_cast_fp16)[name = tensor<string, []>("linear_2_cast_fp16")];
+            tensor<fp16, [1, 32]> clip_2_cast_fp16 = clip(alpha = var_3_to_fp16, beta = var_4_to_fp16, x = linear_2_cast_fp16)[name = tensor<string, []>("clip_2_cast_fp16")];
+            tensor<fp16, [1, 32]> net_6_weight_to_fp16 = const()[name = tensor<string, []>("net_6_weight_to_fp16"), val = tensor<fp16, [1, 32]>(BLOBFILE(path = tensor<string, []>("@model_path/weights/weight.bin"), offset = tensor<uint64, []>(412736)))];
+            tensor<fp16, [1]> net_6_bias_to_fp16 = const()[name = tensor<string, []>("net_6_bias_to_fp16"), val = tensor<fp16, [1]>([0x1.d5p+0])];
+            tensor<fp16, [1, 1]> evaluation = linear(bias = net_6_bias_to_fp16, weight = net_6_weight_to_fp16, x = clip_2_cast_fp16)[name = tensor<string, []>("linear_3_cast_fp16")];
+        } -> (evaluation);
+}

@@ -1,0 +1,3 @@
+SixFour currently has no direct third-party runtime component.
+
+See THIRD_PARTY_NOTICES.md for development and CI dependencies, and sbom.cdx.json for the machine-readable SBOM.

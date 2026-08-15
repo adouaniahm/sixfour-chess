@@ -1,0 +1,7 @@
+// Copy this file to Signing.local.xcconfig and replace every placeholder.
+// Do not commit Signing.local.xcconfig.
+
+DEVELOPMENT_TEAM = YOUR_APPLE_TEAM_ID
+CODE_SIGN_STYLE = Manual
+"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution"
+"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Your provisioning profile name"

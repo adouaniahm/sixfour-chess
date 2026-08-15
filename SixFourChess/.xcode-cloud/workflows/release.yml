@@ -1,0 +1,66 @@
+name: Release Build (All Platforms)
+description: Build and archive FreeChess for App Store submission (iOS & macOS)
+
+trigger:
+  tags:
+    - 'v*'
+  branches:
+    - release/*
+
+environment:
+  xcode: 16.0
+
+platforms:
+  - iOS
+  - macOS
+
+destinations:
+  - platform: iOS
+    device: Any iOS Device
+  - platform: macOS
+    os: latest
+
+actions:
+  build:
+    scheme: FreeChessApp
+    configuration: Release
+    clean: true
+
+  archive:
+    scheme: FreeChessApp
+    configuration: Release
+    export_options:
+      - ios:
+          export_method: app-store
+          upload_symbols: true
+          include_bitcode: false
+      - macos:
+          export_method: mac-catalyst
+          upload_symbols: true
+
+  test:
+    enabled: true
+    scheme: FreeChessApp
+    configuration: Debug
+    code_coverage: true
+
+post_actions:
+  testflight:
+    enabled: true
+    groups:
+      - Beta Testers
+      - Internal Team
+    external_beta_testing: false
+
+  notifications:
+    email:
+      on_success: true
+      on_failure: true
+    slack:
+      webhook_url: ${SLACK_WEBHOOK_URL}
+      on_success: true
+      on_failure: true
+
+environment_variables:
+  MARKETING_VERSION: 1.0.0
+  CURRENT_PROJECT_VERSION: 1

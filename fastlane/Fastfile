@@ -1,0 +1,97 @@
+default_platform(:ios)
+
+platform :ios do
+  desc("Run unit tests for CI")
+  lane :ci_unit_tests do |options|
+    ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] ||= "60"
+    ENV["FASTLANE_XCODEBUILD_SETTINGS_RETRIES"] ||= "2"
+
+    project = resolve_project(options[:project])
+    scheme = resolve_test_scheme(project, options[:scheme])
+    destination = options[:destination].to_s.empty? ? resolve_simulator_destination : options[:destination]
+
+    UI.message("Using project: #{project}")
+    UI.message("Using scheme: #{scheme}")
+    UI.message("Using destination: #{destination}")
+
+    run_tests(
+      project: project,
+      scheme: scheme,
+      destination: destination,
+      clean: true,
+      derived_data_path: derived_data_path,
+      xcargs: "CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO",
+      code_coverage: false,
+      result_bundle: true,
+      skip_slack: true
+    )
+  end
+end
+
+def derived_data_path
+  base_path = ENV.fetch("RUNNER_TEMP", File.expand_path("..", __dir__))
+  File.join(base_path, "DerivedData")
+end
+
+def resolve_project(project_path)
+  return project_path unless project_path.nil? || project_path.empty?
+
+  repository_root = File.expand_path("..", __dir__)
+  derived_data = File.join(repository_root, "DerivedData")
+  projects = Dir[File.join(repository_root, "**", "*.xcodeproj")]
+    .reject { |path| path.start_with?(derived_data) }
+    .sort
+  UI.user_error!("No .xcodeproj found in repository.") if projects.empty?
+
+  projects.first
+end
+
+def resolve_test_scheme(project, scheme_name)
+  return scheme_name unless scheme_name.nil? || scheme_name.empty?
+
+  scheme_dir = File.join(project, "xcshareddata", "xcschemes")
+  scheme_files = Dir[File.join(scheme_dir, "*.xcscheme")].map { |path| File.basename(path, ".xcscheme") }
+
+  if scheme_files.empty?
+    UI.user_error!("No shared .xcscheme files found in #{scheme_dir}.")
+  end
+
+  non_ui_tests = scheme_files.select { |s| s.include?("Tests") && s !~ /UITests/i }
+  return non_ui_tests.first unless non_ui_tests.empty?
+
+  tests = scheme_files.select { |s| s.include?("Tests") }
+  return tests.first unless tests.empty?
+
+  scheme_files.first
+end
+
+def resolve_simulator_destination
+  begin
+    raw_devices = sh("xcrun simctl list devices available -j", log: false)
+    parsed = JSON.parse(raw_devices)
+    ios_devices = parsed.fetch("devices", {})
+    ios_runtimes = ios_devices.keys.select { |runtime| runtime.include?("iOS") }
+    latest_runtime = ios_runtimes.max_by do |runtime|
+      version = runtime.sub(/^.*iOS[- ]?/, "").tr("-", ".")
+      Gem::Version.new(version)
+    rescue ArgumentError
+      Gem::Version.new("0")
+    end
+
+    if latest_runtime && ios_devices[latest_runtime]
+      selected_device = ios_devices[latest_runtime].find do |device|
+        state = (device["state"] || "").downcase
+        (state == "shutdown" || state == "booted") && (device["isAvailable"] != false)
+      end
+
+      if selected_device
+        return "platform=iOS Simulator,id=#{selected_device.fetch("udid")}"
+      end
+    end
+  rescue JSON::ParserError, StandardError => e
+    UI.message("Unable to resolve simulator from simctl JSON: #{e.message}")
+  end
+
+  UI.message("Fallback to generic iOS simulator destination.")
+  "platform=iOS Simulator"
+end

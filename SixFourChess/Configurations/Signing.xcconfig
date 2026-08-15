@@ -1,0 +1,7 @@
+// Public signing configuration.
+//
+// Xcode loads Signing.local.xcconfig when it exists. That local file is ignored
+// by Git so team identifiers, certificate names, and provisioning-profile names
+// never enter the repository.
+CODE_SIGN_STYLE = Automatic
+#include? "Signing.local.xcconfig"

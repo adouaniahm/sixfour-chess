@@ -1,0 +1,545 @@
+/*
+  Localizable.strings - English
+  SixFour Chess App
+*/
+
+// MARK: - App Name
+"app.name" = "SixFour Chess";
+"app.tagline" = "64 squares, centuries of heritage.";
+"home.title" = "SixFour";
+"home.subtitle" = "Play simply";
+
+// MARK: - Game Modes
+"mode.playerVsBot" = "Play vs Bot";
+"mode.playerVsBot.desc" = "Challenge the AI engine with 5 difficulty levels, including Master mode (cloud)";
+
+// MARK: - Difficulty Levels
+"difficulty.easy" = "Easy";
+"difficulty.medium" = "Medium";
+"difficulty.hard" = "Hard";
+"difficulty.expert" = "Expert";
+"difficulty.master" = "Master";
+
+// MARK: - Player Colors
+"color.white" = "White";
+"color.black" = "Black";
+"player.label" = "Player";
+"bot.label" = "Bot";
+
+// MARK: - Piece Types
+"piece.king" = "King";
+"piece.queen" = "Queen";
+"piece.rook" = "Rook";
+"piece.bishop" = "Bishop";
+"piece.knight" = "Knight";
+"piece.pawn" = "Pawn";
+
+// MARK: - Game Actions
+"action.newGame" = "New Game";
+"action.undo" = "Undo";
+"action.settings" = "Settings";
+"action.help" = "Ask for Help";
+"action.analyzing" = "Analyzing...";
+"action.apply" = "Apply";
+"action.cancel" = "Cancel";
+"action.playMove" = "Play this move";
+"action.history" = "History";
+"action.leaveMatch" = "Leave Match";
+
+// MARK: - Compact Control Bar
+"control.hint" = "Hint (%d)";
+"control.new" = "New";
+"control.moves" = "Moves";
+"control.quit" = "Quit";
+"control.matches" = "Matches";
+
+// MARK: - New Game Confirmation
+"alert.newGame.title" = "New Game";
+"alert.newGame.message" = "Are you sure you want to start a new game? Your current progress will be lost.";
+
+// MARK: - Settings
+"settings.title" = "Settings";
+"settings.gameMode" = "Game Mode";
+"settings.gameMode.singleMode" = "Local game against the AI";
+"settings.gameMode.masterModeSummary" = "Online analysis against Master AI";
+"settings.difficulty" = "Bot Difficulty";
+"settings.difficulty.locked.title" = "Game in progress";
+"settings.difficulty.locked.message" = "Difficulty can only be changed for a game that has not started yet.";
+"settings.feedback" = "Game Feedback";
+"settings.moveComments" = "Move Messages";
+"settings.rules" = "Chess Rules";
+"settings.info" = "📚 Information";
+
+// MARK: - Game Results
+"result.checkmate" = "Checkmate! %@ won";
+"result.checkmate.white" = "White";
+"result.checkmate.black" = "Black";
+"result.stalemate" = "Stalemate! Draw";
+"result.drawByRepetition" = "Draw! Threefold repetition";
+"result.drawByFiftyMoves" = "Draw! Fifty-move rule";
+"result.corruptedMatch" = "Error: Match data corrupted";
+
+// MARK: - Help System
+"help.title" = "Game Help";
+"help.subtitle" = "Analyze the best move to play";
+"help.remaining" = "Hints remaining after this one: %d";
+"help.limit.title" = "No hints left";
+"help.limit.message" = "You have used the 3 available hints for this game.";
+"help.warning.check" = "⚠️ Warning! You are in check.";
+"help.suggestedMove" = "💡 Suggested move: ";
+"help.whyGood" = "Why this move?";
+"help.noMoves" = "No move available to analyze.";
+"help.capturesPiece" = "Captures a piece worth %d";
+"help.castles" = "Puts the king to safety";
+"help.activatesRook" = "Activates the rook";
+"help.promotion" = "Promotes the pawn to a queen";
+"help.controlsCenter" = "Controls the center";
+"help.developsPiece" = "Develops a piece";
+"help.bestMove" = "Best move according to position analysis";
+"help.improvesPosition" = "Improves your strategic position";
+
+// MARK: - Move Descriptions
+"move.from" = "from";
+"move.to" = "to";
+"move.captures" = "captures";
+"move.shortCastle" = "Short castle (O-O)";
+"move.longCastle" = "Long castle (O-O-O)";
+
+// MARK: - Promotion
+"promotion.title" = "Choose promotion";
+"promotion.aiTitle" = "Bot Promotion";
+"promotion.aiMessage" = "The Bot promotes its pawn to %@.";
+
+// MARK: - AI Turn
+"ai.turn.title" = "Bot's Turn";
+"ai.turn.message" = "It's now the Bot's turn. Do you want to let it play or undo another move?";
+"ai.turn.letPlay" = "Let the Bot play";
+"ai.turn.undoMore" = "No, undo again";
+
+// MARK: - Undo vs AI
+"undo.vsai.title" = "Undo Your Move";
+"undo.vsai.message" = "The Bot's move has been undone. Do you also want to undo your last move?";
+"undo.vsai.yes" = "Yes, undo my move";
+"undo.vsai.no" = "No, let the Bot play again";
+
+// MARK: - Rules
+"rules.title" = "Chess Rules";
+"rules.intro" = "This application implements the official FIDE chess rules. Here is an overview of available features.";
+"rules.implemented" = "✅ Implemented Rules";
+"rules.notImplemented" = "⚠️ Rules Not Yet Implemented";
+"rules.technologies" = "Technologies used:";
+"rules.version" = "Version: %@";
+
+// MARK: - Tech Stack Section
+"tech.architecture" = "Architecture";
+"tech.architecture.redux" = "Redux pattern (9 middlewares)";
+"tech.architecture.middleware" = "Action/Mutation pipeline";
+"tech.architecture.flow" = "Reactive flows (ReduxFlow)";
+
+"tech.ai" = "Chess AI Engine";
+"tech.ai.elo" = "Expert mode: ~2100 estimated Elo";
+"tech.ai.elo.master" = "Master mode: ~3500+ Elo (Stockfish 18 Cloud)";
+"tech.ai.nnue" = "NNUE evaluation (CoreML on-device)";
+"tech.ai.minimax" = "Negamax + Alpha-Beta pruning";
+"tech.ai.nullmove" = "Null-Move Pruning (R=2)";
+"tech.ai.quiescence" = "Quiescence Search (anti-horizon)";
+"tech.ai.lmr" = "Late Move Reductions (LMR)";
+"tech.ai.killer" = "Killer Moves (2 slots/ply)";
+"tech.ai.check_ext" = "Check extensions";
+"tech.ai.evaluation" = "Piece-Square Tables (PST) + king safety";
+"tech.ai.mvvlva" = "MVV-LVA move ordering";
+"tech.ai.transposition" = "Transposition table (Zobrist)";
+"tech.ai.opening_book" = "Opening book (Polyglot)";
+
+"tech.frameworks" = "Frameworks";
+"tech.frameworks.swift6" = "Swift 6 + @Observable";
+"tech.frameworks.swiftui" = "SwiftUI (iOS 17+)";
+"tech.frameworks.concurrency" = "async/await + actors";
+"tech.frameworks.swiftdata" = "SwiftData (persistence)";
+
+
+"tech.accessibility" = "Accessibility & UX";
+"tech.accessibility.voiceover" = "Full VoiceOver support";
+"tech.accessibility.haptics" = "Haptic feedback + sounds";
+"tech.accessibility.i18n" = "3 languages (EN, FR, IT)";
+
+// Rule descriptions
+"rule.basicMoves" = "Basic Moves";
+"rule.basicMoves.desc" = "All legal moves for each piece (pawn, knight, bishop, rook, queen, king)";
+"rule.captures" = "Captures";
+"rule.captures.desc" = "Capture of opponent pieces according to standard rules";
+"rule.enPassant" = "En Passant";
+"rule.enPassant.desc" = "Special capture of a pawn that has just advanced two squares";
+"rule.castling" = "Castling";
+"rule.castling.desc" = "Kingside and queenside castling when conditions are met";
+"rule.promotion" = "Pawn Promotion (FIDE Rule)";
+"rule.promotion.desc" = "When a pawn reaches the last rank, it MUST be promoted to queen, rook, bishop or knight. The player can freely choose any piece. If a piece of the same type of your color has been captured, it is automatically removed from captured pieces (and the score is adjusted). Otherwise, a new piece is created. You can therefore have multiple queens on the board.";
+"rule.checkmate" = "Checkmate";
+"rule.checkmate.desc" = "Automatic detection of checkmate (victory)";
+"rule.stalemate" = "Stalemate";
+"rule.stalemate.desc" = "Automatic detection of stalemate (draw with no check but no legal move)";
+"rule.threefold" = "Threefold Repetition";
+"rule.threefold.desc" = "Automatic draw if the same position is repeated 3 times";
+"rule.fiftyMoves" = "Fifty-Move Rule";
+"rule.fiftyMoves.desc" = "Automatic draw after 50 moves without pawn movement or capture";
+"rule.validation" = "Move Validation";
+"rule.validation.desc" = "Prevents moves that put own king in check";
+"rule.history" = "Move History";
+"rule.history.desc" = "Recording of all moves played with timestamp";
+"rule.undo" = "Undo Moves";
+"rule.undo.desc" = "Ability to undo last moves played";
+
+"rule.bot.title" = "🤖 Chess Bot";
+"rule.bot.minimax" = "Minimax Algorithm";
+"rule.bot.minimax.desc" = "Uses Minimax algorithm with Alpha-Beta pruning";
+"rule.bot.levels" = "4 difficulty levels";
+"rule.bot.levels.desc" = "Easy (depth 1), Medium (2), Hard (3), Expert (4)";
+"rule.bot.evaluation" = "Position Evaluation";
+"rule.bot.evaluation.desc" = "Evaluates positions with piece values and position tables";
+
+"rule.insufficient" = "Insufficient Material";
+"rule.insufficient.desc" = "Automatic draw detection if insufficient material (e.g.: king + knight vs king)";
+"rule.clock" = "Chess Clock";
+"rule.clock.desc" = "Time management with timer for each player";
+"rule.pgn" = "Complete Algebraic Notation";
+"rule.pgn.desc" = "PGN (Portable Game Notation) to export/import games";
+"rule.endgame" = "Endgame Tablebases";
+"rule.endgame.desc" = "Endgame tablebases for positions with few pieces";
+"rule.analysis" = "Game Analysis";
+"rule.analysis.desc" = "Evaluation of moves played and improvement suggestions";
+"rule.tournament" = "Tournament Mode";
+"rule.tournament.desc" = "Tournament organization with ELO ranking";
+"rule.puzzles" = "Chess Puzzles";
+"rule.puzzles.desc" = "Solving chess problems and tactics";
+
+// MARK: - Additional UI strings
+"color.whites" = "White";
+"color.blacks" = "Black";
+"ui.thinking" = "Thinking...";
+"ui.history" = "History";
+"ui.moves" = "Moves played: %d";
+
+// MARK: - Move Commentary
+"moveComment.check" = "Check!";
+"moveComment.castling" = "Castling played!";
+"moveComment.enPassant" = "En passant!";
+"moveComment.promotion" = "Promotion to %@!";
+"moveComment.winningCapture" = "Winning capture!";
+"moveComment.goodCapture" = "Good capture!";
+"moveComment.equalTrade" = "Equal trade";
+"moveComment.badCapture" = "Bad capture";
+"moveComment.checkmate" = "Checkmate!";
+"moveComment.stalemate" = "Stalemate";
+"moveComment.drawRepetition" = "Draw by repetition";
+"moveComment.drawFiftyMoves" = "Fifty-move draw";
+"moveComment.gameOver" = "Game over";
+"moveComment.center" = "Takes the center";
+"moveComment.developsPiece" = "Develops a piece";
+"moveComment.activatesPiece" = "Activates a piece";
+"moveComment.usefulDevelopment" = "Useful development";
+"moveComment.improvesActivity" = "Improves activity";
+"moveComment.solidPosition" = "Solid position";
+"moveComment.looksForWeakness" = "Looks for a weakness";
+
+// MARK: - Settings
+"settings.copyright" = "© 2026 ADOUANI SAS";
+"ui.learning" = "Learning";
+
+// Game History
+"game.history.current" = "Moves";
+"game.history.full" = "Moves";
+"game.history.viewAll" = "View All";
+"game.history.empty" = "No moves yet";
+"history.played.title" = "Played Games";
+"history.played.detail.title" = "Game History";
+"history.played.empty.title" = "No saved games";
+"history.played.empty.message" = "Finished games will appear here.";
+"history.played.summary" = "%d moves • %@ • %@";
+"history.played.meta" = "AI level: %@ • %@";
+"history.replay.start" = "Starting position";
+"history.replay.moveIndex" = "Move %d of %d";
+"history.replay.first" = "Start";
+"history.replay.previous" = "Prev";
+"history.replay.next" = "Next";
+"history.replay.last" = "End";
+"history.result.abandoned" = "Interrupted game";
+"ui.perfect.beginners" = "Perfect for beginners, 2 moves ahead";
+"ui.good.practice" = "Good for practice, 3 moves ahead";
+"ui.challenge.experienced" = "Challenge for experienced players, 4 moves ahead";
+"ui.very.hard" = "Very hard, calculates up to 5 moves ahead";
+"ui.master.cloud" = "Stockfish 18 cloud engine, strongest available";
+"ui.search.depth" = "Search depth: %d";
+
+// MARK: - Accessibility Labels
+// Chessboard
+"a11y.chessboard.label" = "Chessboard";
+"a11y.square" = "Square %@";
+"a11y.emptySquare" = "Empty square";
+"a11y.selected" = "Selected";
+"a11y.availableMove" = "Available move";
+"a11y.lastMove" = "Last move";
+"a11y.close" = "Close";
+
+// Hints
+"a11y.hint.tapToSelect" = "Tap to select this piece";
+"a11y.hint.tapToMove" = "Tap to move selected piece here";
+"a11y.hint.getHelp" = "Show a hint. You have %d hints left in this game.";
+"a11y.hint.newGame" = "Start a new game with current settings";
+"a11y.hint.history" = "View all moves played in the current game";
+"a11y.hint.applyChanges" = "Apply settings and start a new game";
+"a11y.hint.noChanges" = "No changes to apply";
+"a11y.hint.tapToView" = "Tap to view this game";
+
+// Player Info
+"a11y.yourTurn" = "Your turn";
+"a11y.captured" = "Captured: %@";
+"a11y.advantage" = "Material advantage: +%d";
+"a11y.noCaptured" = "No captured pieces";
+
+// Navigation Controls
+"a11y.rewind" = "Back to start";
+"a11y.previousMove" = "Previous move";
+"a11y.nextMove" = "Next move";
+"a11y.fastForward" = "Fast forward to end";
+"a11y.hint.rewind" = "Go back to the initial position";
+"a11y.hint.previousMove" = "View the previous move";
+"a11y.hint.nextMove" = "View the next move";
+"a11y.hint.fastForward" = "Go to the final position";
+
+// Search & Filters
+"a11y.year" = "Year %d";
+"a11y.notSelected" = "Not selected";
+"a11y.clearSearch" = "Clear search";
+"a11y.searchField" = "Search games";
+"a11y.hint.searchGames" = "Search by player name or event";
+
+// Rules
+"a11y.implemented" = "Implemented";
+"a11y.planned" = "Planned for future";
+
+// Game Info
+"a11y.result" = "Result: %@";
+"a11y.event" = "Event";
+"a11y.location" = "Location";
+"a11y.date" = "Date";
+"a11y.viewing" = "Viewing";
+"a11y.inYear" = "in %d";
+"a11y.at" = "at %@";
+
+// History
+"a11y.moveEntry" = "Move %d: %@";
+"a11y.moveNumber" = "Move number %d";
+"a11y.move" = "Move: %@";
+"a11y.time" = "Time";
+
+// General
+"action.ok" = "OK";
+"game.result.title" = "Game Over";
+// MARK: - About Section
+"settings.about" = "About";
+"settings.version" = "Version";
+"settings.privacy" = "Privacy Policy";
+"settings.support" = "Support & Contact";
+"settings.allRightsReserved" = "All rights reserved.";
+
+"action.quit" = "Quit";
+"action.start" = "Start";
+"action.play" = "Play";
+"error.title" = "Error";
+"error.authentication" = "Authentication error";
+"error.loading" = "Loading error";
+"error.cannotParseGame" = "Unable to parse this game's moves";
+
+// Cloud Stockfish (Master mode)
+"cloud.error.title" = "Master service unavailable";
+"cloud.error.network" = "Check your internet connection";
+"cloud.error.api" = "Stockfish service is temporarily unavailable";
+"cloud.error.suggestion" = "You can change difficulty in settings to play locally";
+"cloud.error.retry" = "Retry";
+
+"loading.game" = "Loading game...";
+"time.agoSeconds" = "%ds ago";
+"time.agoMinutes" = "%dmin ago";
+"time.agoHours" = "%dh ago";
+
+// MARK: - Menu Commands
+"menu.game" = "Game";
+"menu.newGame" = "New Game";
+"menu.undo" = "Undo";
+"menu.settings" = "Settings";
+
+// MARK: - Consent Management (CMP)
+// Common
+"privacy.title" = "Privacy";
+"privacy.data" = "Privacy & Data";
+
+// Consent Banner
+"consent.banner.headline.simple" = "Your Privacy Choices";
+"consent.banner.message.simple" = "We only use the data required to run the app and, if you allow it, anonymous usage metrics and optional cloud analysis. You can manage your preferences below.";
+"consent.banner.accept" = "Accept All";
+"consent.banner.refuse" = "Refuse All";
+"consent.banner.continue" = "Continue without accepting";
+"consent.banner.save" = "Save My Choices"; // NEW
+"consent.banner.savePreferences" = "Save My Preferences";
+"consent.banner.accept_all" = "Accept All";
+"consent.banner.refuse_non_essential" = "Refuse Non-Essential";
+"consent.banner.footer.info" = "You can change your preferences at any time from the Settings.";
+
+// Consent Categories
+"consent.category.title" = "Data Categories";
+"consent.category.footer" = "Tap 'Modify Preferences' to adjust your privacy choices.";
+"consent.category.always.active" = "Always Active";
+
+"consent.category.necessary.name" = "Strictly Necessary";
+"consent.category.necessary.desc" = "Essential for the app to function properly. This data enables core functionality such as local saves, security, and accessibility.";
+
+"consent.category.performance.name" = "Performance & Analytics";
+"consent.category.performance.desc" = "Help us understand how you use the app so we can improve your experience. This data collects anonymous usage statistics.";
+
+// Consent Permissions
+"consent.permission.storage.name" = "Game Data Storage";
+"consent.permission.storage.desc" = "Save your game progress and preferences";
+"consent.permission.analytics.name" = "Usage Analytics";
+"consent.permission.analytics.desc" = "Anonymous analytics to improve the app";
+"consent.permission.cloudai.name" = "Cloud AI Analysis (Master Mode)";
+"consent.permission.cloudai.desc" = "In Master mode, chess positions (FEN) are sent to lichess.org and stockfish.online for computation. No personal data is transmitted.";
+
+// Consent Settings
+"consent.settings.title" = "Privacy & Data";
+"consent.settings.status" = "Consent Status";
+"consent.settings.granted" = "Granted on %@";
+"consent.settings.notGranted" = "Not granted";
+"consent.settings.modify" = "Modify Preferences";
+"consent.settings.preferences" = "Privacy Preferences";
+"consent.settings.actions" = "Data Management";
+"consent.settings.export" = "Export My Data";
+"consent.settings.delete" = "Delete My Account";
+"consent.settings.actions.footer.simple" = "These features are coming soon.";
+"consent.settings.comingsoon.title" = "Coming Soon";
+"consent.settings.comingsoon.export" = "Data export functionality will be available in a future update.";
+"consent.settings.comingsoon.delete" = "Account deletion will be available in a future update.";
+
+// Privacy Policy
+"privacy.policy.title" = "Privacy Policy";
+
+// Privacy Policy - Summary View
+"privacy.policy.summary.title" = "Summary";
+"privacy.policy.summary.content" = "SixFour prioritizes your privacy. Local play stays on your device, and optional analytics are controlled by your consent choices.";
+
+"privacy.policy.key.points" = "Key Points";
+"privacy.policy.point.offline" = "Offline mode: no data collection";
+"privacy.policy.point.cloudai" = "Cloud analysis: chess positions are sent only with your permission";
+"privacy.policy.point.consent" = "Explicit consent required";
+"privacy.policy.point.no.ads" = "No advertising or tracking";
+"privacy.policy.point.gdpr" = "GDPR and CNIL compliant";
+
+"privacy.policy.read.full" = "Read Full Policy";
+"privacy.policy.external.link" = "Opens in browser";
+
+"privacy.policy.contact.title" = "Contact";
+
+// MARK: - VoiceOver Announcements
+// Moves
+"a11y.announce.yourMove" = "You played %@ from %@ to %@";
+"a11y.announce.botMove" = "Bot played %@ from %@ to %@";
+"a11y.announce.opponentMove" = "Opponent played %@ from %@ to %@";
+"a11y.announce.genericMove" = "%@ played %@ from %@ to %@";
+
+// Turns
+"a11y.announce.yourTurnNow" = "It's your turn";
+"a11y.announce.botTurnNow" = "Bot is thinking";
+"a11y.announce.opponentTurnNow" = "Opponent's turn";
+"a11y.announce.genericTurn" = "It's %@'s turn";
+
+// Check
+"a11y.announce.check" = "Check!";
+"a11y.announce.check.single" = "Check by %@!";
+"a11y.announce.check.double" = "Double check by %@ and %@!";
+
+// Game End
+"a11y.announce.checkmate.win" = "Checkmate! You won! Congratulations!";
+"a11y.announce.checkmate.lose" = "Checkmate. The Bot won.";
+"a11y.announce.checkmate.generic" = "Checkmate! %@ won!";
+"a11y.announce.stalemate" = "Stalemate. The game is a draw.";
+"a11y.announce.draw" = "Draw.";
+"a11y.announce.draw.repetition" = "Draw by threefold repetition.";
+"a11y.announce.draw.fiftyMoves" = "Draw by fifty-move rule.";
+
+// Captures
+"a11y.announce.capturedAt" = "You captured the %@ on %@";
+"a11y.announce.capturedEnPassant" = "You captured the %@ en passant on %@";
+"a11y.announce.botCapturedAt" = "The Bot captured your %@ on %@";
+"a11y.announce.botCapturedEnPassant" = "The Bot captured your %@ en passant on %@";
+"a11y.announce.genericCaptureAt" = "%@ captured the %@ on %@";
+"a11y.announce.genericCaptureEnPassant" = "%@ captured the %@ en passant on %@";
+
+// Castling
+"a11y.announce.yourCastleKingside" = "You castled kingside";
+"a11y.announce.yourCastleQueenside" = "You castled queenside";
+"a11y.announce.botCastleKingside" = "Bot castled kingside";
+"a11y.announce.botCastleQueenside" = "Bot castled queenside";
+"a11y.announce.genericCastleKingside" = "Kingside castling";
+"a11y.announce.genericCastleQueenside" = "Queenside castling";
+
+// Promotion
+"a11y.announce.promotion" = "Pawn promoted to %@";
+
+// Selection
+"a11y.announce.noMoves" = "%@ selected. No moves available.";
+"a11y.announce.oneMove" = "%@ selected. One possible move: %@";
+"a11y.announce.multipleMoves" = "%@ selected. %@ possible moves: %@";
+
+// Undo
+"a11y.announce.undo" = "Move undone.";
+"a11y.announce.undoToStart" = "Back to initial position.";
+"a11y.announce.undoVsAI" = "Your move and bot's response undone.";
+"a11y.announce.undoVsAIToStart" = "Back to initial position.";
+
+// Game Summary
+"a11y.announce.gameSummary.modeAI" = "Game against bot, difficulty %@";
+"a11y.announce.gameSummary.opponent" = "opponent";
+"a11y.announce.gameSummary.moveCount" = "%d moves played";
+"a11y.announce.gameSummary.yourTurn" = "It's your turn";
+"a11y.announce.gameSummary.opponentTurn" = "It's the opponent's turn";
+"a11y.announce.gameSummary.inCheck" = "You are in check";
+
+// Tap Guards
+"a11y.announce.gameOver" = "Game is over";
+"a11y.announce.aiThinking" = "Bot is thinking, please wait";
+"a11y.announce.notYourTurn" = "It's not your turn";
+"a11y.announce.deselected" = "Deselected";
+"a11y.hint.readOnlyBoard" = "Read-only board";
+"a11y.hint.gameOverBoard" = "Game over, board is not interactive";
+
+// Toolbar
+"a11y.toolbar.quit" = "Quit match";
+"a11y.toolbar.settings" = "Settings";
+
+// Consent
+"a11y.consent.save" = "Save my choices";
+"a11y.consent.acceptAll" = "Accept all";
+"a11y.consent.refuse" = "Refuse non-essential";
+
+// Settings
+"a11y.settings.currentDifficulty" = "Current difficulty: %@";
+"a11y.settings.changeDifficultyHint" = "You can change the difficulty in the opponent difficulty section below";
+
+// Matchmaking
+"a11y.share.invitation" = "Share invitation";
+"a11y.cancel.match" = "Cancel match";
+"a11y.resume.match" = "Resume match against %@";
+"a11y.join.match" = "Join match from %@";
+
+// Audio Settings
+"settings.soundEffects" = "Sound Effects";
+
+// MARK: - Profile
+"profile.title" = "Profile";
+"profile.edit" = "Edit Profile";
+"profile.displayName" = "Display Name";
+"profile.changePhoto" = "Change Photo";
+"profile.removePhoto" = "Remove Photo";
+"profile.saveError" = "Unable to save profile. Please try again.";
+"profile.imageError" = "Unable to load the selected image.";
+"profile.nameTaken" = "This name is already taken by another player.";
+"action.save" = "Save";

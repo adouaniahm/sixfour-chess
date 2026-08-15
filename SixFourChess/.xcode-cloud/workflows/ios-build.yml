@@ -1,0 +1,38 @@
+name: iOS Build and Test
+description: Build and test FreeChess for iOS (iPhone & iPad)
+
+trigger:
+  branches:
+    - main
+    - develop
+  pull_requests:
+    - main
+
+environment:
+  xcode: 16.0
+
+platform: iOS
+
+destinations:
+  - platform: iOS Simulator
+    device: iPhone 16
+    os: latest
+  - platform: iOS Simulator
+    device: iPad Pro (12.9-inch) (6th generation)
+    os: latest
+
+actions:
+  build:
+    scheme: FreeChessApp
+    configuration: Debug
+
+  archive:
+    scheme: FreeChessApp
+    configuration: Release
+    export_method: app-store
+
+post_actions:
+  notifications:
+    email:
+      on_success: false
+      on_failure: true

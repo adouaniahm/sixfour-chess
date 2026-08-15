@@ -1,0 +1,545 @@
+/*
+  Localizable.strings - Français
+  SixFour Chess App
+*/
+
+// MARK: - App Name
+"app.name" = "SixFour Échecs";
+"app.tagline" = "64 cases, des siècles d'héritage.";
+"home.title" = "SixFour";
+"home.subtitle" = "Jouez simplement";
+
+// MARK: - Game Modes
+"mode.playerVsBot" = "Contre un adversaire virtuel";
+"mode.playerVsBot.desc" = "Affrontez le moteur d'IA avec 5 niveaux de difficulté, dont le mode Maître (cloud)";
+
+// MARK: - Difficulty Levels
+"difficulty.easy" = "Facile";
+"difficulty.medium" = "Moyen";
+"difficulty.hard" = "Difficile";
+"difficulty.expert" = "Expert";
+"difficulty.master" = "Maître";
+
+// MARK: - Player Colors
+"color.white" = "Blancs";
+"color.black" = "Noirs";
+"player.label" = "Joueur";
+"bot.label" = "Adversaire virtuel";
+
+// MARK: - Piece Types
+"piece.king" = "Roi";
+"piece.queen" = "Dame";
+"piece.rook" = "Tour";
+"piece.bishop" = "Fou";
+"piece.knight" = "Cavalier";
+"piece.pawn" = "Pion";
+
+// MARK: - Game Actions
+"action.newGame" = "Nouvelle partie";
+"action.undo" = "Annuler";
+"action.settings" = "Paramètres";
+"action.help" = "Demander de l'aide";
+"action.analyzing" = "Analyse en cours...";
+"action.apply" = "Appliquer";
+"action.cancel" = "Annuler";
+"action.playMove" = "Jouer ce coup";
+"action.history" = "Historique";
+"action.leaveMatch" = "Quitter la partie";
+
+// MARK: - Compact Control Bar
+"control.hint" = "Aide (%d)";
+"control.new" = "Nouveau";
+"control.moves" = "Coups";
+"control.quit" = "Quitter";
+"control.matches" = "Parties";
+
+// MARK: - New Game Confirmation
+"alert.newGame.title" = "Nouvelle partie";
+"alert.newGame.message" = "Voulez-vous vraiment recommencer ? La partie en cours sera perdue.";
+
+// MARK: - Settings
+"settings.title" = "Paramètres";
+"settings.gameMode" = "Mode de jeu";
+"settings.gameMode.singleMode" = "Partie locale contre l'IA";
+"settings.gameMode.masterModeSummary" = "Analyse en ligne contre l'IA Maître";
+"settings.difficulty" = "Difficulté de l'adversaire";
+"settings.difficulty.locked.title" = "Partie en cours";
+"settings.difficulty.locked.message" = "La difficulté ne peut être modifiée que pour une partie non commencée.";
+"settings.feedback" = "Retour de jeu";
+"settings.moveComments" = "Messages de coup";
+"settings.rules" = "Règles des échecs";
+"settings.info" = "📚 Informations";
+
+// MARK: - Game Results
+"result.checkmate" = "Échec et mat ! %@ ont gagné";
+"result.checkmate.white" = "Les blancs";
+"result.checkmate.black" = "Les noirs";
+"result.stalemate" = "Pat ! Match nul";
+"result.drawByRepetition" = "Match nul ! Répétition triple de la position";
+"result.drawByFiftyMoves" = "Match nul ! Règle des 50 coups";
+"result.corruptedMatch" = "Erreur : Données de la partie corrompues";
+
+// MARK: - Help System
+"help.title" = "Aide au jeu";
+"help.subtitle" = "Analysez le meilleur coup à jouer";
+"help.remaining" = "Aides restantes après celle-ci : %d";
+"help.limit.title" = "Aides épuisées";
+"help.limit.message" = "Vous avez utilisé les 3 aides disponibles pour cette partie.";
+"help.warning.check" = "⚠️ Attention ! Vous êtes en échec.";
+"help.suggestedMove" = "💡 Coup suggéré : ";
+"help.whyGood" = "Pourquoi ce coup ?";
+"help.noMoves" = "Aucun coup disponible à analyser.";
+"help.capturesPiece" = "Capture une pièce de valeur %d";
+"help.castles" = "Met le roi en sécurité";
+"help.activatesRook" = "Active la tour";
+"help.promotion" = "Promeut le pion en dame";
+"help.controlsCenter" = "Contrôle le centre";
+"help.developsPiece" = "Développe une pièce";
+"help.bestMove" = "Meilleur coup selon l'analyse de position";
+"help.improvesPosition" = "Améliore votre position stratégique";
+
+// MARK: - Move Descriptions
+"move.from" = "de";
+"move.to" = "vers";
+"move.captures" = "capture";
+"move.shortCastle" = "Petit roque (O-O)";
+"move.longCastle" = "Grand roque (O-O-O)";
+
+// MARK: - Promotion
+"promotion.title" = "Choisir la promotion";
+"promotion.aiTitle" = "Promotion de l'adversaire";
+"promotion.aiMessage" = "L'adversaire virtuel promeut son pion en %@.";
+
+// MARK: - AI Turn
+"ai.turn.title" = "Tour de l'adversaire";
+"ai.turn.message" = "C'est maintenant le tour de l'adversaire virtuel. Voulez-vous le laisser jouer ou annuler un autre coup ?";
+"ai.turn.letPlay" = "Laisser l'adversaire jouer";
+"ai.turn.undoMore" = "Non, annuler encore";
+
+// MARK: - Undo vs AI
+"undo.vsai.title" = "Annuler votre coup";
+"undo.vsai.message" = "Le coup de l'adversaire virtuel a été annulé. Voulez-vous aussi annuler votre dernier coup ?";
+"undo.vsai.yes" = "Oui, annuler mon coup";
+"undo.vsai.no" = "Non, laisser l'adversaire rejouer";
+
+// MARK: - Rules
+"rules.title" = "Règles des échecs";
+"rules.intro" = "Cette application implémente les règles officielles des échecs FIDE. Voici un aperçu des fonctionnalités disponibles.";
+"rules.implemented" = "✅ Règles implémentées";
+"rules.notImplemented" = "⚠️ Règles non encore implémentées";
+"rules.technologies" = "Technologies utilisées :";
+"rules.version" = "Version : %@";
+
+// MARK: - Tech Stack Section
+"tech.architecture" = "Architecture";
+"tech.architecture.redux" = "Pattern Redux (9 middlewares)";
+"tech.architecture.middleware" = "Pipeline Action/Mutation";
+"tech.architecture.flow" = "Flux réactifs (ReduxFlow)";
+
+"tech.ai" = "Moteur d'IA";
+"tech.ai.elo" = "Mode Expert : ~2100 Elo estimé";
+"tech.ai.elo.master" = "Mode Maître : ~3500+ Elo (Stockfish 18 Cloud)";
+"tech.ai.nnue" = "Évaluation NNUE (CoreML on-device)";
+"tech.ai.minimax" = "Negamax + Alpha-Beta pruning";
+"tech.ai.nullmove" = "Null-Move Pruning (R=2)";
+"tech.ai.quiescence" = "Quiescence Search (anti-horizon)";
+"tech.ai.lmr" = "Late Move Reductions (LMR)";
+"tech.ai.killer" = "Killer Moves (2 slots/ply)";
+"tech.ai.check_ext" = "Extensions d'échecs";
+"tech.ai.evaluation" = "Tables positionnelles (PST) + sécurité roi";
+"tech.ai.mvvlva" = "Ordre de coups MVV-LVA";
+"tech.ai.transposition" = "Table de transposition (Zobrist)";
+"tech.ai.opening_book" = "Livre d'ouvertures (Polyglot)";
+
+"tech.frameworks" = "Frameworks";
+"tech.frameworks.swift6" = "Swift 6 + @Observable";
+"tech.frameworks.swiftui" = "SwiftUI (iOS 17+)";
+"tech.frameworks.concurrency" = "async/await + actors";
+"tech.frameworks.swiftdata" = "SwiftData (persistance)";
+
+
+"tech.accessibility" = "Accessibilité & UX";
+"tech.accessibility.voiceover" = "Support VoiceOver complet";
+"tech.accessibility.haptics" = "Retour haptique + sons";
+"tech.accessibility.i18n" = "3 langues (EN, FR, IT)";
+
+// Rule descriptions
+"rule.basicMoves" = "Mouvements de base";
+"rule.basicMoves.desc" = "Tous les mouvements légaux pour chaque pièce (pion, cavalier, fou, tour, reine, roi)";
+"rule.captures" = "Captures";
+"rule.captures.desc" = "Capture de pièces adverses selon les règles standard";
+"rule.enPassant" = "En passant";
+"rule.enPassant.desc" = "Capture spéciale d'un pion qui vient d'avancer de deux cases";
+"rule.castling" = "Roque (Castling)";
+"rule.castling.desc" = "Petit et grand roque lorsque les conditions sont remplies";
+"rule.promotion" = "Promotion du pion (Règle FIDE)";
+"rule.promotion.desc" = "Quand un pion atteint la dernière rangée, il DOIT être promu en dame, tour, fou ou cavalier. Le joueur peut choisir librement n'importe quelle pièce. Si une pièce de même type de votre couleur a été capturée, elle est automatiquement retirée des pièces capturées (et le score est ajusté). Sinon, une nouvelle pièce est créée. Vous pouvez donc avoir plusieurs dames sur l'échiquier.";
+"rule.checkmate" = "Échec et mat";
+"rule.checkmate.desc" = "Détection automatique de l'échec et mat (victoire)";
+"rule.stalemate" = "Pat (Stalemate)";
+"rule.stalemate.desc" = "Détection automatique du pat (match nul sans échec mais sans coup légal)";
+"rule.threefold" = "Répétition triple";
+"rule.threefold.desc" = "Match nul automatique si la même position se répète 3 fois";
+"rule.fiftyMoves" = "Règle des 50 coups";
+"rule.fiftyMoves.desc" = "Match nul automatique après 50 coups sans mouvement de pion ni capture";
+"rule.validation" = "Validation des coups";
+"rule.validation.desc" = "Empêche les coups qui mettent son propre roi en échec";
+"rule.history" = "Historique des coups";
+"rule.history.desc" = "Enregistrement de tous les coups joués avec horodatage";
+"rule.undo" = "Annulation de coups";
+"rule.undo.desc" = "Possibilité d'annuler les derniers coups joués";
+
+"rule.bot.title" = "🤖 Adversaire virtuel";
+"rule.bot.minimax" = "Algorithme Minimax";
+"rule.bot.minimax.desc" = "Utilise l'algorithme Minimax avec élagage Alpha-Beta";
+"rule.bot.levels" = "4 niveaux de difficulté";
+"rule.bot.levels.desc" = "Facile (profondeur 1), Moyen (2), Difficile (3), Expert (4)";
+"rule.bot.evaluation" = "Évaluation de position";
+"rule.bot.evaluation.desc" = "Évalue les positions avec valeurs des pièces et tables de position";
+
+"rule.insufficient" = "Mat insuffisant";
+"rule.insufficient.desc" = "Détection automatique de match nul si matériel insuffisant (ex: roi + cavalier vs roi)";
+"rule.clock" = "Horloge d'échecs";
+"rule.clock.desc" = "Gestion du temps avec chronomètre pour chaque joueur";
+"rule.pgn" = "Notation algébrique complète";
+"rule.pgn.desc" = "Notation PGN (Portable Game Notation) pour exporter/importer des parties";
+"rule.endgame" = "Tableaux de fin de partie";
+"rule.endgame.desc" = "Endgame tablebases pour les positions avec peu de pièces";
+"rule.analysis" = "Analyse de partie";
+"rule.analysis.desc" = "Évaluation des coups joués et suggestion d'améliorations";
+"rule.tournament" = "Mode tournoi";
+"rule.tournament.desc" = "Organisation de tournois avec classement ELO";
+"rule.puzzles" = "Puzzles d'échecs";
+"rule.puzzles.desc" = "Résolution de problèmes d'échecs et tactiques";
+
+// MARK: - Additional UI strings
+"color.whites" = "Blancs";
+"color.blacks" = "Noirs";
+"ui.thinking" = "Réflexion...";
+"ui.history" = "Historique";
+"ui.moves" = "Coups joués : %d";
+
+// MARK: - Move Commentary
+"moveComment.check" = "Échec !";
+"moveComment.castling" = "Roque joué !";
+"moveComment.enPassant" = "En passant !";
+"moveComment.promotion" = "Promotion en %@ !";
+"moveComment.winningCapture" = "Prise gagnante !";
+"moveComment.goodCapture" = "Bonne prise !";
+"moveComment.equalTrade" = "Échange équilibré";
+"moveComment.badCapture" = "Prise défavorable";
+"moveComment.checkmate" = "Échec et mat !";
+"moveComment.stalemate" = "Pat";
+"moveComment.drawRepetition" = "Nulle par répétition";
+"moveComment.drawFiftyMoves" = "Nulle des 50 coups";
+"moveComment.gameOver" = "Fin de partie";
+"moveComment.center" = "Prend le centre";
+"moveComment.developsPiece" = "Développe une pièce";
+"moveComment.activatesPiece" = "Active une pièce";
+"moveComment.usefulDevelopment" = "Développement utile";
+"moveComment.improvesActivity" = "Améliore l'activité";
+"moveComment.solidPosition" = "Position solide";
+"moveComment.looksForWeakness" = "Cherche une faiblesse";
+
+// MARK: - Settings
+"settings.copyright" = "© 2026 ADOUANI SAS";
+"ui.learning" = "Apprentissage";
+
+// Game History
+"game.history.current" = "Coups joués";
+"game.history.full" = "Coups joués";
+"game.history.viewAll" = "Voir tout";
+"game.history.empty" = "Aucun coup joué";
+"history.played.title" = "Parties jouées";
+"history.played.detail.title" = "Historique de partie";
+"history.played.empty.title" = "Aucune partie enregistrée";
+"history.played.empty.message" = "Les parties terminées apparaîtront ici.";
+"history.played.summary" = "%d coups • %@ • %@";
+"history.played.meta" = "Niveau IA : %@ • %@";
+"history.replay.start" = "Position de départ";
+"history.replay.moveIndex" = "Coup %d sur %d";
+"history.replay.first" = "Début";
+"history.replay.previous" = "Avant";
+"history.replay.next" = "Après";
+"history.replay.last" = "Fin";
+"history.result.abandoned" = "Partie interrompue";
+"ui.perfect.beginners" = "Parfait pour les débutants, 2 coups d'avance";
+"ui.good.practice" = "Bon niveau pour s'entraîner, 3 coups d'avance";
+"ui.challenge.experienced" = "Challenger pour joueurs expérimentés, 4 coups d'avance";
+"ui.very.hard" = "Très difficile, calcule jusqu'à 5 coups d'avance";
+"ui.master.cloud" = "Moteur cloud Stockfish 18, le plus fort disponible";
+"ui.search.depth" = "Profondeur de recherche : %d";
+
+// MARK: - Labels d'Accessibilité
+// Échiquier
+"a11y.chessboard.label" = "Échiquier";
+"a11y.square" = "Case %@";
+"a11y.emptySquare" = "Case vide";
+"a11y.selected" = "Sélectionnée";
+"a11y.availableMove" = "Coup disponible";
+"a11y.lastMove" = "Dernier coup";
+"a11y.close" = "Fermer";
+
+// Indications
+"a11y.hint.tapToSelect" = "Toucher pour sélectionner cette pièce";
+"a11y.hint.tapToMove" = "Toucher pour déplacer la pièce sélectionnée ici";
+"a11y.hint.getHelp" = "Afficher une aide. Il vous reste %d aides pour cette partie.";
+"a11y.hint.newGame" = "Démarrer une nouvelle partie avec les paramètres actuels";
+"a11y.hint.history" = "Voir tous les coups joués dans la partie en cours";
+"a11y.hint.applyChanges" = "Appliquer les paramètres et démarrer une nouvelle partie";
+"a11y.hint.noChanges" = "Aucun changement à appliquer";
+"a11y.hint.tapToView" = "Toucher pour voir cette partie";
+
+// Info Joueur
+"a11y.yourTurn" = "C'est votre tour";
+"a11y.captured" = "Pièces capturées : %@";
+"a11y.advantage" = "Avantage matériel : +%d";
+"a11y.noCaptured" = "Aucune pièce capturée";
+
+// Contrôles de Navigation
+"a11y.rewind" = "Retour au début";
+"a11y.previousMove" = "Coup précédent";
+"a11y.nextMove" = "Coup suivant";
+"a11y.fastForward" = "Avance rapide jusqu'à la fin";
+"a11y.hint.rewind" = "Revenir à la position initiale";
+"a11y.hint.previousMove" = "Voir le coup précédent";
+"a11y.hint.nextMove" = "Voir le coup suivant";
+"a11y.hint.fastForward" = "Aller à la position finale";
+
+// Recherche & Filtres
+"a11y.year" = "Année %d";
+"a11y.notSelected" = "Non sélectionnée";
+"a11y.clearSearch" = "Effacer la recherche";
+"a11y.searchField" = "Rechercher des parties";
+"a11y.hint.searchGames" = "Rechercher par nom de joueur ou événement";
+
+// Règles
+"a11y.implemented" = "Implémentée";
+"a11y.planned" = "Prévue pour plus tard";
+
+// Info Partie
+"a11y.result" = "Résultat : %@";
+"a11y.event" = "Événement";
+"a11y.location" = "Lieu";
+"a11y.date" = "Date";
+"a11y.viewing" = "Visualisation";
+"a11y.inYear" = "en %d";
+"a11y.at" = "à %@";
+
+// Historique
+"a11y.moveEntry" = "Coup %d : %@";
+"a11y.moveNumber" = "Coup numéro %d";
+"a11y.move" = "Coup : %@";
+"a11y.time" = "Heure";
+
+// Général
+"action.ok" = "OK";
+"game.result.title" = "Partie terminée";
+// MARK: - Section À propos
+"settings.about" = "À propos";
+"settings.version" = "Version";
+"settings.privacy" = "Politique de confidentialité";
+"settings.support" = "Support & Contact";
+"settings.allRightsReserved" = "Tous droits réservés.";
+
+"action.quit" = "Quitter";
+"action.start" = "Commencer";
+"action.play" = "Jouer";
+"error.title" = "Erreur";
+"error.authentication" = "Erreur d'authentification";
+"error.loading" = "Erreur de chargement";
+"error.cannotParseGame" = "Impossible de parser les coups de cette partie";
+
+// Cloud Stockfish (mode Maître)
+"cloud.error.title" = "Service Maître indisponible";
+"cloud.error.network" = "Vérifiez votre connexion internet";
+"cloud.error.api" = "Le service Stockfish est temporairement indisponible";
+"cloud.error.suggestion" = "Vous pouvez changer la difficulté dans les réglages pour jouer en local";
+"cloud.error.retry" = "Réessayer";
+
+"loading.game" = "Chargement de la partie...";
+"time.agoSeconds" = "Il y a %ds";
+"time.agoMinutes" = "Il y a %dmin";
+"time.agoHours" = "Il y a %dh";
+
+// MARK: - Commandes Menu
+"menu.game" = "Partie";
+"menu.newGame" = "Nouvelle partie";
+"menu.undo" = "Annuler";
+"menu.settings" = "Paramètres";
+
+// MARK: - Gestion du Consentement (CMP)
+// Commun
+"privacy.title" = "Confidentialité";
+"privacy.data" = "Confidentialité & Données";
+
+// Bannière de consentement
+"consent.banner.headline.simple" = "Vos Choix de Confidentialité";
+"consent.banner.message.simple" = "Nous utilisons uniquement les données nécessaires au fonctionnement de l'application et, si vous l'autorisez, des mesures d'usage anonymes et des analyses cloud optionnelles. Vous pouvez gérer vos préférences ci-dessous.";
+"consent.banner.accept" = "Tout Accepter";
+"consent.banner.refuse" = "Tout Refuser";
+"consent.banner.continue" = "Continuer sans accepter";
+"consent.banner.save" = "Enregistrer mes choix"; // NOUVEAU
+"consent.banner.savePreferences" = "Enregistrer Mes Préférences";
+"consent.banner.accept_all" = "Tout Accepter";
+"consent.banner.refuse_non_essential" = "Refuser les Non-Essentiels";
+"consent.banner.footer.info" = "Vous pouvez modifier vos préférences à tout moment depuis les Paramètres.";
+
+// Catégories de consentement
+"consent.category.title" = "Catégories de données";
+"consent.category.footer" = "Appuyez sur 'Modifier les Préférences' pour ajuster vos choix de confidentialité.";
+"consent.category.always.active" = "Toujours Actif";
+
+"consent.category.necessary.name" = "Strictement Nécessaires";
+"consent.category.necessary.desc" = "Essentiels au bon fonctionnement de l'application. Ces données permettent les fonctionnalités de base comme la sauvegarde locale, la sécurité et l'accessibilité.";
+
+"consent.category.performance.name" = "Performance & Analytique";
+"consent.category.performance.desc" = "Nous aident à comprendre comment vous utilisez l'application pour améliorer votre expérience. Ces données collectent des statistiques d'utilisation anonymes.";
+
+// Permissions de consentement
+"consent.permission.storage.name" = "Stockage des Données de Jeu";
+"consent.permission.storage.desc" = "Sauvegarder votre progression et vos préférences";
+"consent.permission.analytics.name" = "Analytique d'Utilisation";
+"consent.permission.analytics.desc" = "Analytique anonyme pour améliorer l'application";
+"consent.permission.cloudai.name" = "Analyse IA Cloud (Mode Maître)";
+"consent.permission.cloudai.desc" = "En mode Maître, les positions d'échiquier (FEN) sont envoyées à lichess.org et stockfish.online pour calcul. Aucune donnée personnelle n'est transmise.";
+
+// Paramètres de consentement
+"consent.settings.title" = "Confidentialité & Données";
+"consent.settings.status" = "Statut du Consentement";
+"consent.settings.granted" = "Accordé le %@";
+"consent.settings.notGranted" = "Non accordé";
+"consent.settings.modify" = "Modifier les Préférences";
+"consent.settings.preferences" = "Préférences de confidentialité";
+"consent.settings.actions" = "Gestion des Données";
+"consent.settings.export" = "Exporter Mes Données";
+"consent.settings.delete" = "Supprimer Mon Compte";
+"consent.settings.actions.footer.simple" = "Ces fonctionnalités arrivent bientôt.";
+"consent.settings.comingsoon.title" = "Bientôt Disponible";
+"consent.settings.comingsoon.export" = "L'exportation des données sera disponible dans une prochaine mise à jour.";
+"consent.settings.comingsoon.delete" = "La suppression du compte sera disponible dans une prochaine mise à jour.";
+
+// Politique de confidentialité
+"privacy.policy.title" = "Politique de Confidentialité";
+
+// Privacy Policy - Summary View
+"privacy.policy.summary.title" = "Résumé";
+"privacy.policy.summary.content" = "SixFour privilégie votre confidentialité. Le jeu local reste sur votre appareil, et les analyses optionnelles dépendent de vos choix de consentement.";
+
+"privacy.policy.key.points" = "Points Clés";
+"privacy.policy.point.offline" = "Mode hors ligne : aucune collecte de données";
+"privacy.policy.point.cloudai" = "Analyse cloud : positions d'échecs envoyées uniquement avec votre accord";
+"privacy.policy.point.consent" = "Consentement explicite requis";
+"privacy.policy.point.no.ads" = "Pas de publicité ni de tracking";
+"privacy.policy.point.gdpr" = "Conforme RGPD et CNIL";
+
+"privacy.policy.read.full" = "Lire la politique complète";
+"privacy.policy.external.link" = "Ouvre dans le navigateur";
+
+"privacy.policy.contact.title" = "Contact";
+
+// MARK: - VoiceOver Announcements
+// Moves
+"a11y.announce.yourMove" = "Vous avez joué %@ de %@ à %@";
+"a11y.announce.botMove" = "L'adversaire virtuel a joué %@ de %@ à %@";
+"a11y.announce.opponentMove" = "L'adversaire a joué %@ de %@ à %@";
+"a11y.announce.genericMove" = "%@ a joué %@ de %@ à %@";
+
+// Turns
+"a11y.announce.yourTurnNow" = "C'est votre tour";
+"a11y.announce.botTurnNow" = "L'adversaire virtuel réfléchit";
+"a11y.announce.opponentTurnNow" = "C'est au tour de l'adversaire";
+"a11y.announce.genericTurn" = "C'est au tour de %@";
+
+// Check
+"a11y.announce.check" = "Échec !";
+"a11y.announce.check.single" = "Échec par %@ !";
+"a11y.announce.check.double" = "Échec double par %@ et %@ !";
+
+// Game End
+"a11y.announce.checkmate.win" = "Échec et mat ! Vous avez gagné ! Félicitations !";
+"a11y.announce.checkmate.lose" = "Échec et mat. L'adversaire virtuel a gagné.";
+"a11y.announce.checkmate.generic" = "Échec et mat ! %@ a gagné !";
+"a11y.announce.stalemate" = "Pat. La partie est nulle.";
+"a11y.announce.draw" = "Match nul.";
+"a11y.announce.draw.repetition" = "Match nul par triple répétition.";
+"a11y.announce.draw.fiftyMoves" = "Match nul par la règle des 50 coups.";
+
+// Captures
+"a11y.announce.capturedAt" = "Vous avez capturé le %@ en %@";
+"a11y.announce.capturedEnPassant" = "Vous avez capturé le %@ en passant en %@";
+"a11y.announce.botCapturedAt" = "L'adversaire virtuel a capturé votre %@ en %@";
+"a11y.announce.botCapturedEnPassant" = "L'adversaire virtuel a capturé votre %@ en passant en %@";
+"a11y.announce.genericCaptureAt" = "%@ a capturé le %@ en %@";
+"a11y.announce.genericCaptureEnPassant" = "%@ a capturé le %@ en passant en %@";
+
+// Castling
+"a11y.announce.yourCastleKingside" = "Vous avez fait le petit roque";
+"a11y.announce.yourCastleQueenside" = "Vous avez fait le grand roque";
+"a11y.announce.botCastleKingside" = "L'adversaire virtuel a fait le petit roque";
+"a11y.announce.botCastleQueenside" = "L'adversaire virtuel a fait le grand roque";
+"a11y.announce.genericCastleKingside" = "Petit roque effectué";
+"a11y.announce.genericCastleQueenside" = "Grand roque effectué";
+
+// Promotion
+"a11y.announce.promotion" = "Pion promu en %@";
+
+// Selection
+"a11y.announce.noMoves" = "%@ sélectionné. Aucun coup disponible.";
+"a11y.announce.oneMove" = "%@ sélectionné. Un coup possible : %@";
+"a11y.announce.multipleMoves" = "%@ sélectionné. %@ coups possibles : %@";
+
+// Undo
+"a11y.announce.undo" = "Coup annulé.";
+"a11y.announce.undoToStart" = "Retour à la position initiale.";
+"a11y.announce.undoVsAI" = "Votre coup et la réponse de l'adversaire virtuel ont été annulés.";
+"a11y.announce.undoVsAIToStart" = "Retour à la position initiale.";
+
+// Game Summary
+"a11y.announce.gameSummary.modeAI" = "Partie contre l'adversaire virtuel, difficulté %@";
+"a11y.announce.gameSummary.opponent" = "adversaire";
+"a11y.announce.gameSummary.moveCount" = "%d coups joués";
+"a11y.announce.gameSummary.yourTurn" = "C'est votre tour";
+"a11y.announce.gameSummary.opponentTurn" = "C'est au tour de l'adversaire";
+"a11y.announce.gameSummary.inCheck" = "Vous êtes en échec";
+
+// Tap Guards
+"a11y.announce.gameOver" = "La partie est terminée";
+"a11y.announce.aiThinking" = "L'adversaire virtuel réfléchit, veuillez patienter";
+"a11y.announce.notYourTurn" = "Ce n'est pas votre tour";
+"a11y.announce.deselected" = "Désélectionné";
+"a11y.hint.readOnlyBoard" = "Échiquier en lecture seule";
+"a11y.hint.gameOverBoard" = "Partie terminée, échiquier non interactif";
+
+// Toolbar
+"a11y.toolbar.quit" = "Quitter la partie";
+"a11y.toolbar.settings" = "Paramètres";
+
+// Consent
+"a11y.consent.save" = "Enregistrer mes choix";
+"a11y.consent.acceptAll" = "Tout accepter";
+"a11y.consent.refuse" = "Refuser les non essentiels";
+
+// Settings
+"a11y.settings.currentDifficulty" = "Difficulté actuelle : %@";
+"a11y.settings.changeDifficultyHint" = "Vous pouvez changer la difficulté dans la section difficulté de l'adversaire plus bas";
+
+// Matchmaking
+"a11y.share.invitation" = "Partager l'invitation";
+"a11y.cancel.match" = "Annuler la partie";
+"a11y.resume.match" = "Reprendre la partie contre %@";
+"a11y.join.match" = "Rejoindre la partie de %@";
+
+// Audio Settings
+"settings.soundEffects" = "Effets sonores";
+
+// MARK: - Profile
+"profile.title" = "Profil";
+"profile.edit" = "Modifier le profil";
+"profile.displayName" = "Nom d'affichage";
+"profile.changePhoto" = "Changer la photo";
+"profile.removePhoto" = "Supprimer la photo";
+"profile.saveError" = "Impossible de sauvegarder le profil. Réessayez.";
+"profile.imageError" = "Impossible de charger l'image sélectionnée.";
+"profile.nameTaken" = "Ce nom est déjà utilisé par un autre joueur.";
+"action.save" = "Enregistrer";

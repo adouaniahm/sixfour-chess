@@ -1,0 +1,65 @@
+[
+  {
+    "shortDescription" : "NNUE chess position evaluator (768->256->32->32->1)",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 1)",
+        "shortDescription" : "",
+        "shape" : "[1, 1]",
+        "name" : "evaluation",
+        "type" : "MultiArray"
+      }
+    ],
+    "version" : "1.0.0",
+    "modelParameters" : [
+
+    ],
+    "author" : "SixFourChess AI Pipeline",
+    "specificationVersion" : 8,
+    "storagePrecision" : "Float16",
+    "mlProgramOperationTypeHistogram" : {
+      "Ios17.clip" : 3,
+      "Ios17.linear" : 4
+    },
+    "computePrecision" : "Float16",
+    "stateSchema" : [
+
+    ],
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "14.0",
+      "tvOS" : "17.0",
+      "visionOS" : "1.0",
+      "watchOS" : "10.0",
+      "iOS" : "17.0",
+      "macCatalyst" : "17.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 768)",
+        "shortDescription" : "",
+        "shape" : "[1, 768]",
+        "name" : "features",
+        "type" : "MultiArray"
+      }
+    ],
+    "userDefinedMetadata" : {
+      "com.github.apple.coremltools.conversion_date" : "2026-02-21",
+      "com.github.apple.coremltools.source" : "torch==2.6.0",
+      "com.github.apple.coremltools.version" : "9.0",
+      "com.github.apple.coremltools.source_dialect" : "TorchScript"
+    },
+    "generatedClassName" : "nnue",
+    "method" : "predict"
+  }
+]

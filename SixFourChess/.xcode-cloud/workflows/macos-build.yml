@@ -1,0 +1,34 @@
+name: macOS Build and Test
+description: Build and test FreeChess for macOS (Catalyst)
+
+trigger:
+  branches:
+    - main
+    - develop
+  pull_requests:
+    - main
+
+environment:
+  xcode: 16.0
+
+platform: macOS
+
+destinations:
+  - platform: macOS
+    os: latest
+
+actions:
+  build:
+    scheme: FreeChessApp
+    configuration: Debug
+
+  archive:
+    scheme: FreeChessApp
+    configuration: Release
+    export_method: mac-catalyst
+
+post_actions:
+  notifications:
+    email:
+      on_success: false
+      on_failure: true

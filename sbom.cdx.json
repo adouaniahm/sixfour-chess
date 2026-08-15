@@ -1,0 +1,26 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:1a456590-e3d2-4d0c-ae10-1136cfcc4841",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-16T00:00:00Z",
+    "component": {
+      "type": "application",
+      "name": "SixFour",
+      "version": "2.2.1",
+      "licenses": [{ "license": { "id": "MIT" } }]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "fastlane",
+      "version": "2.238.0",
+      "purl": "pkg:gem/fastlane@2.238.0",
+      "scope": "optional",
+      "licenses": [{ "license": { "id": "MIT" } }]
+    }
+  ]
+}
